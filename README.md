@@ -56,8 +56,6 @@ The code is primarily provided in the Jupyter notebook [`assignement_code.ipynb`
 
 ---
 
----
-
 ## ⚙ **Setup and Dependencies**
 To run the experiments locally, install the required dependencies:
 
@@ -82,18 +80,26 @@ pip install torch matplotlib seaborn numpy poutyne
    ```
 
 ---
+
 ## 📊 Key Experiments in the Notebook
 
-**1. Activation Function Comparisons**
-- Illustrates how $\mathrm{erf}(w \cdot x)$ closely approximates $\mathrm{sign}(w \cdot x)$ while remaining differentiable.  
-- Contrasts it with $\tanh(w \cdot x)$.
+1. **Hyperparameter Selection & Final Model Configurations**  
+   - The notebook begins by **loading a pre-determined `param_grid`** that contains only **the best hyperparameters** for each model and dataset combination.  
+   - These configurations stem from a broader search (commented out in code), where:
+     - **PBGNet** and **PBGNet-Pretrain** are chosen based on minimizing the **PAC-Bayes bound**.  
+     - **PBGNet-ll** and **Baseline** are chosen based on minimizing the **validation loss**.
+   - **No further tuning** is performed during the final runs; instead, these hyperparameters are used **as-is** to generate reproducible results.
 
-**2. PAC-Bayesian Bound Evaluation**
-- Monitors **Catoni’s bound** throughout training for different datasets.  
-- Demonstrates that **KL divergence minimization** helps control overfitting.
+2. **Bound vs. Empirical Loss Evaluation**  
+   - The final analyses **compare the PAC-Bayes bound** to the **observed test loss** across datasets.
+  
+3. **Comparison of Activation Functions**  
+  - Erf-based PAC-Bayesian aggregation
+  - Tanh activation
+  - Sign activation
+    
+4. **Empirical Study of Generalization Bounds**  
 
-**3. Empirical vs. Theoretical Performance**
-- Plots the **test error** alongside the **PAC-Bayesian bound**, highlighting the gap between theoretical predictions and real-world performance.
 
 ---
 
@@ -115,7 +121,7 @@ pip install torch matplotlib seaborn numpy poutyne
 
 - This repository was developed as a **course assignment** at CentraleSupélec for the *"Principes Théoriques de l’Apprentissage Profond"* (2024/25) curriculum.  
 - Feel free to open issues or submit pull requests for improvements.
-- This project is released under the [MIT License](LICENSE) (or another license if specified). Please review `LICENSE` for usage and distribution details.
+- This project is released under the [MIT License](LICENSE). Please review `LICENSE` for usage and distribution details.
 
 **If you find this work helpful, please consider giving a ⭐ star!**  
-Happy researching and experimenting with **PAC-Bayesian Binary Activated Deep Networks**.
+Happy researching and experimenting with **PAC-Bayesian Binary Activated Deep Neural Networks**.
