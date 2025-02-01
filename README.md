@@ -85,18 +85,14 @@ pip install torch matplotlib seaborn numpy poutyne
 ## 📊 Key Experiments in the Notebook
 
 **1. Activation Function Comparisons**
-- Illustrates how \(\mathrm{erf}(w \cdot x)\) closely approximates \(\mathrm{sign}(w \cdot x)\) while remaining differentiable.  
-- Contrasts it with \(\tanh(w \cdot x)\).
+- Illustrates how $\mathrm{erf}(w \cdot x)$ closely approximates $\mathrm{sign}(w \cdot x)$ while remaining differentiable.  
+- Contrasts it with $\tanh(w \cdot x)$.
 
 **2. PAC-Bayesian Bound Evaluation**
 - Monitors **Catoni’s bound** throughout training for different datasets.  
 - Demonstrates that **KL divergence minimization** helps control overfitting.
 
-**3. Monte Carlo Sampling Approaches**
-- Shows how the **aggregator-based** approach scales to deeper architectures and large hidden layers.  
-- Compares **naive vs. efficient** sampling strategies for binary activations.
-
-**4. Empirical vs. Theoretical Performance**
+**3. Empirical vs. Theoretical Performance**
 - Plots the **test error** alongside the **PAC-Bayesian bound**, highlighting the gap between theoretical predictions and real-world performance.
 
 ---
