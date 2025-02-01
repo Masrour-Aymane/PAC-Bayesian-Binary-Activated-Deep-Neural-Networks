@@ -1,0 +1,19 @@
+{
+    "batch_size": 64,
+    "dataset": "mnist_low_high",
+    "epochs": 150,
+    "experiment_name": "final_results",
+    "hidden_layers": 3,
+    "hidden_size": 100,
+    "learning_rate": 0.001,
+    "lr_patience": 5,
+    "network": "baseline",
+    "optim_algo": "adam",
+    "pre_epochs": 0,
+    "prior": "zero",
+    "random_seed": 42,
+    "sample_size": 0,
+    "stop_early": 20,
+    "valid_size": 0.2,
+    "weight_decay": 1e-06
+}

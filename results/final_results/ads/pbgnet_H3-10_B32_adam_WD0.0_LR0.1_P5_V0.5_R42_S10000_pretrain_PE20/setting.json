@@ -1,0 +1,19 @@
+{
+    "batch_size": 32,
+    "dataset": "ads",
+    "epochs": 150,
+    "experiment_name": "final_results",
+    "hidden_layers": 3,
+    "hidden_size": 10,
+    "learning_rate": 0.1,
+    "lr_patience": 5,
+    "network": "pbgnet",
+    "optim_algo": "adam",
+    "pre_epochs": 20,
+    "prior": "pretrain",
+    "random_seed": 42,
+    "sample_size": 10000,
+    "stop_early": 20,
+    "valid_size": 0.5,
+    "weight_decay": 0.0
+}
